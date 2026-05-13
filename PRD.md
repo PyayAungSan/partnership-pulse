@@ -6,7 +6,7 @@
 
 ## TL;DR
 
-Partnership Pulse is an internal AI co-pilot for Google Play partner managers. It compresses prep time for recurring partner meetings from ~4 hours to ~15 minutes by auto-generating reviewable briefs from CRM, performance, and support data — freeing partner managers to spend their time on the conversations, not the synthesis.
+Partnership Pulse is an internal AI co-pilot for partner managers at a large platform business. It compresses prep time for recurring partner meetings from ~4 hours to ~15 minutes by auto-generating reviewable briefs from CRM, performance, and support data — freeing partner managers to spend their time on the conversations, not the synthesis.
 
 **Pilot target:** 50% prep-time reduction for 10 partner managers in Q1, with 80%+ of generated briefs used as-is or with minor edits.
 
@@ -14,7 +14,7 @@ Partnership Pulse is an internal AI co-pilot for Google Play partner managers. I
 
 ## Context: what's a Quarterly Business Review (QBR)?
 
-Every quarter, a Google Play partner manager runs a structured review meeting with each of their strategic partners (game studios, OEMs, publishers, payments providers). The meeting covers four things, every time:
+Every quarter, a platform partner manager runs a structured review meeting with each of their strategic partners (game studios, OEMs, publishers, payments providers). The meeting covers four things, every time:
 
 1. **Performance** — how the partner did against shared goals last quarter
 2. **Open issues** — escalations, blockers, integration status
@@ -27,9 +27,9 @@ QBRs are the heartbeat of partnership management. They're also where most of the
 
 ## Problem
 
-A Google Play partner manager owns 15–30 strategic partners. Each QBR requires:
+A platform partner manager owns 15–30 strategic partners. Each QBR requires:
 
-- Pulling app performance from Play Console
+- Pulling app performance from the developer console
 - Reading last quarter's meeting notes, emails, and follow-ups
 - Reviewing CRM for open deals and contract milestones
 - Checking ticket trackers for unresolved escalations
@@ -46,7 +46,7 @@ The synthesis is repetitive, structured-input → structured-output work with a 
 
 ## User
 
-**Primary:** Sarah, Senior Partner Manager, Google Play. 6 years in BD. Owns 22 partners across APAC gaming. Spends Monday mornings prepping the week's QBRs.
+**Primary:** Sarah, Senior Partner Manager. 6 years in BD. Owns 22 partners across APAC gaming. Spends Monday mornings prepping the week's QBRs.
 
 Quotes (to validate in user research):
 - *"I'm not adding value reformatting analytics into slides."*
@@ -161,7 +161,7 @@ On click, generate a 1-page brief:
 
 ## How it works (v1 architecture sketch)
 
-1. **Ingest** from CRM, Play Console, internal ticket tracker → Partner State JSON
+1. **Ingest** from CRM, the developer console, internal ticket tracker → Partner State JSON
 2. **Generate** on-demand: per-section LLM calls with structured prompts grounded in Partner State
 3. **Review** loop: section-level accept / edit / regenerate
 4. **Export** to Doc or Slides for the actual meeting
@@ -220,7 +220,7 @@ Portfolio-level pattern detection (which partner segments are growing / at risk)
 
 - **Data residency:** which partner data can the model see, and where does inference run?
 - **Versioning:** if briefs are generated on-demand, how do PMs reference "what the brief said last quarter"? Snapshot on export?
-- **Build vs. internal models vs. external:** which components use Google-internal models, which use Gemini API, where (if anywhere) is external acceptable?
+- **Build vs. internal models vs. external:** which components use internal foundation models, which use external APIs, where (if anywhere) is external acceptable?
 - **Personalization vs. consistency:** do we let each PM tune brief tone/structure, or hold the bar consistent for cross-team readability?
 
 ---
