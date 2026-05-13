@@ -303,7 +303,18 @@ function Dashboard({ onOpenPartner }) {
         <div className="pp-secth">
           <h2 className="pp-h2">Needs attention <span className="pp-secth-count">{attention.length}</span></h2>
           <div className="pp-secth-right">
-            <span className="pp-secth-note">Surfaced by Pulse · refreshed 6 min ago</span>
+            <span className="pp-secth-note pp-tip-host" tabIndex={0}>
+              <Icons.Sparkle size={11} />
+              Surfaced by Pulse · refreshed 6 min ago
+              <span className="pp-tip" role="tooltip">
+                <span className="pp-tip-title">How this list is built</span>
+                <span className="pp-tip-desc">
+                  Pulse re-scores every partner on health, QBR proximity, contract status,
+                  open issues, and QoQ trend. Partners with at least one risk signal or
+                  declining health show up here, sorted worst-first.
+                </span>
+              </span>
+            </span>
             <div className="pp-carousel-nav">
               <button
                 className="pp-carousel-btn"

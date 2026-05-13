@@ -254,8 +254,9 @@
   font-size: 12px;
   font-weight: 500;
   box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease, right 0.2s ease;
 }
+.pp-app-cp-open .pp-watch-btn { right: calc(var(--cp-w) + 18px); }
 .pp-watch-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,0.18); }
 .pp-watch-btn svg { color: var(--bg); }
 
@@ -406,3 +407,222 @@
   from { opacity: 0; transform: translateY(8px) scale(0.985); }
   to   { opacity: 1; transform: translateY(0)    scale(1);     }
 }
+
+/* ─── Collapsed-sidebar tooltips ─────────────────────────────────────────── */
+.pp-side-link-tip { position: relative; overflow: visible; }
+.pp-side-tip {
+  position: absolute;
+  left: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(4px);
+  background: oklch(22% 0 0);
+  color: oklch(96% 0 0);
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 240px;
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.5;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.22), 0 2px 6px rgba(0,0,0,0.08);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.14s ease, transform 0.14s ease, visibility 0.14s;
+  z-index: 60;
+  white-space: normal;
+}
+.pp-side-link-tip:hover .pp-side-tip,
+.pp-side-link-tip:focus-visible .pp-side-tip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+}
+.pp-side-tip::before {
+  content: "";
+  position: absolute;
+  left: -5px; top: 50%;
+  width: 10px; height: 10px;
+  background: oklch(22% 0 0);
+  transform: translateY(-50%) rotate(45deg);
+  border-radius: 1px;
+}
+.pp-side-tip-title {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 600;
+  font-size: 12.5px;
+  margin-bottom: 4px;
+}
+.pp-side-tip-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 18px; height: 16px; padding: 0 5px;
+  background: rgba(255,255,255,0.14);
+  border-radius: 999px;
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+.pp-side-tip-desc { color: oklch(80% 0 0); }
+
+/* ─── Generic light tooltip (used on "Surfaced by Pulse" etc.) ──────────── */
+.pp-tip-host {
+  position: relative;
+  cursor: help;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 5px;
+}
+.pp-tip-host svg { color: var(--text-3); }
+.pp-tip {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 280px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--text-2);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.06);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 0.14s ease, transform 0.14s ease, visibility 0.14s;
+  z-index: 40;
+  white-space: normal;
+  text-align: left;
+}
+.pp-tip::before {
+  content: "";
+  position: absolute;
+  top: -5px; right: 16px;
+  width: 8px; height: 8px;
+  background: var(--surface);
+  border-left: 1px solid var(--border-strong);
+  border-top: 1px solid var(--border-strong);
+  transform: rotate(45deg);
+}
+.pp-tip-host:hover .pp-tip,
+.pp-tip-host:focus-visible .pp-tip,
+.pp-tip-host:focus-within .pp-tip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.pp-tip-title {
+  display: block;
+  font-weight: 600;
+  font-size: 11.5px;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+.pp-tip-desc { display: block; color: var(--text-2); }
+
+/* ─── Product tour ───────────────────────────────────────────────────────── */
+.pp-tour-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(15, 15, 15, 0.55);
+  z-index: 200;
+  animation: pp-fade 0.18s ease-out;
+}
+.pp-tour-loading { backdrop-filter: blur(2px); }
+.pp-tour-spotlight {
+  position: fixed;
+  z-index: 201;
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 9999px rgba(15, 15, 15, 0.55),
+    0 0 0 2px rgba(255, 255, 255, 0.85),
+    0 10px 36px rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+  transition: top 0.25s ease, left 0.25s ease, width 0.25s ease, height 0.25s ease;
+}
+.pp-tour-tip {
+  position: fixed;
+  z-index: 202;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  padding: 16px 18px 14px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+  animation: pp-pop 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.pp-tour-tip-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+.pp-tour-tip-title {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+.pp-tour-tip-body {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-2);
+  margin-bottom: 14px;
+}
+.pp-tour-tip-foot {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px;
+}
+.pp-tour-tip-nav { display: inline-flex; gap: 6px; }
+.pp-tour-skip {
+  background: transparent;
+  border: 0;
+  color: var(--text-3);
+  font-size: 12px;
+  padding: 6px 0;
+}
+.pp-tour-skip:hover { color: var(--text); }
+.pp-tour-btn {
+  appearance: none;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 7px 14px;
+  border-radius: 7px;
+  font-size: 12.5px;
+  font-weight: 500;
+  transition: background 0.12s, border-color 0.12s;
+}
+.pp-tour-btn:hover { background: var(--surface); border-color: var(--border-strong); }
+.pp-tour-btn-primary {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+.pp-tour-btn-primary:hover { background: oklch(28% 0 0); border-color: oklch(28% 0 0); }
+
+/* ─── Tour launcher (bottom-left) ────────────────────────────────────────── */
+.pp-tour-launcher {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 50;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 13px;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.04);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+.pp-tour-launcher:hover {
+  transform: translateY(-1px);
+  background: var(--bg-2);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+}
+.pp-tour-launcher svg { color: var(--text-2); }

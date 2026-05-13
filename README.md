@@ -1,22 +1,46 @@
-# CODING AGENTS: READ THIS FIRST
+# Partnership Pulse
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+An AI co-pilot for partner managers — a working prototype that compresses Quarterly Business Review (QBR) prep from ~4 hours to ~15 minutes by auto-drafting reviewable briefs from CRM activity, performance data, pipeline, and open issues.
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+**Live demo:** https://partnership-pulse.vercel.app
 
-## What you should do — IMPORTANT
+This repo contains the PRD I wrote and the clickable prototype I built to make the product concrete. It's an unsolicited piece of work I put together as part of applying to a PM role at Google focused on AI in the partner motion.
 
-**Read `partnership-pulse/project/Partnership Pulse.html` in full.** The user had this file open when they triggered the handoff, so it's almost certainly the primary design they want built. Read it top to bottom — don't skim. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+## What's in here
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+- [`PRD.md`](./PRD.md) — the product thinking: problem framing, target user, success metrics, scope tradeoffs, what the pilot looks like.
+- [`project/`](./project/) — the HTML / JSX / CSS prototype (React via CDN + Babel standalone, no build step).
 
-## About the design files
+## What the prototype demonstrates
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+- **Portfolio view** with "Needs attention" surfacing — partners ranked worst-first, with hoverable signal chips (open issues, declining health drivers, contract risk) sourced from a JSON dataset.
+- **AI-drafted QBR briefs** per partner, with confidence/source chips and per-section regenerate.
+- **Conversational co-pilot** grounded in CRM activity, pipeline, and the current brief — intent-routed mock responses pulled from the partner data so it actually responds in the deployed preview.
+- **Product tour** (Pendo-style) walking through the four surfaces, with a persistent "Restart tour" launcher.
+- **Three AI presence modes** (background / visible / conversational) — a tweakable design exploration of how much an AI co-pilot should show its work.
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+## What's real vs. what's stubbed
 
-## Bundle contents
+| Real | Stubbed |
+|---|---|
+| Product design and information architecture | LLM calls — `window.claude.complete()` falls back to a deterministic mock generator routed by user intent (`ai.js → mockCopilotReply`) |
+| The data model (`uploads/partners.json`) — 12 fictional partners with health, pipeline, issues, recent activity | The "refreshed 6 min ago" indicator |
+| The prototype interactions, carousel, tooltips, tour | Auth, persistence, real CRM/perf integrations |
 
-- `partnership-pulse/README.md` — this file
-- `partnership-pulse/project/` — the `Partnership Pulse` project files (HTML prototypes, assets, components)
+## How it was built
+
+The prototype was built using [Claude Design](https://claude.ai/design) for the initial HTML/CSS/JSX scaffold, then iterated on with Claude Code (Sonnet/Opus) for the carousel, tooltip popovers, mock co-pilot routing, product tour, and deployment. AI-assisted prototyping is increasingly part of how I work as a PM — the goal isn't to be the engineer who ships it, but to make the product concrete enough that the conversation with engineering and design starts somewhere real.
+
+## Running locally
+
+No build step. Serve the `project/` folder over HTTP:
+
+```bash
+cd project
+python3 -m http.server 8765
+# open http://localhost:8765
+```
+
+## About me
+
+I'm a Senior PM at Oracle working on integrating LLMs and agentic systems into enterprise workflows, with 6 patents in that space. If the work resonates, I'd love to talk.
