@@ -1,0 +1,164 @@
+/* styles-briefs.css — Briefs library + brief detail/diff */
+
+/* Filter chips */
+.pp-bf-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 20px;
+}
+.pp-bf-filter {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 12px 6px 14px;
+  font-size: 12.5px; color: var(--text-2);
+  font-weight: 500;
+}
+.pp-bf-filter:hover { border-color: var(--border-strong); }
+.pp-bf-filter.is-on { background: var(--text); color: var(--surface); border-color: var(--text); }
+.pp-bf-filter-n {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  background: var(--bg-2);
+  color: var(--text-3);
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+.pp-bf-filter.is-on .pp-bf-filter-n { background: rgba(255,255,255,0.18); color: rgba(255,255,255,0.9); }
+
+/* Briefs list */
+.pp-bf-list {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.pp-bf-list-h, .pp-bf-row {
+  display: grid;
+  grid-template-columns: 2.4fr 0.8fr 0.8fr 1.1fr 0.9fr 1fr 28px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  border-left: 0; border-right: 0; border-top: 0;
+  text-align: left;
+  width: 100%;
+}
+.pp-bf-list-h {
+  background: var(--surface-2);
+  font-size: 11px; color: var(--text-3); font-weight: 600;
+  letter-spacing: 0.03em; text-transform: uppercase;
+  padding: 10px 18px;
+}
+.pp-bf-row { cursor: pointer; transition: background 0.1s; }
+.pp-bf-row:hover { background: var(--surface-2); }
+.pp-bf-list > .pp-bf-row:last-child { border-bottom: 0; }
+.pp-bf-row-l { min-width: 0; }
+.pp-bf-name { font-weight: 600; font-size: 13.5px; margin-bottom: 2px; }
+.pp-bf-headline { font-size: 12px; color: var(--text-3); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; }
+.pp-bf-row-meta, .pp-bf-mono { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.pp-bf-row-q { font-size: 12.5px; color: var(--text-2); font-family: var(--font-mono); }
+.pp-bf-row-when { font-size: 12.5px; }
+.pp-bf-soft { font-size: 11.5px; color: var(--text-3); }
+.pp-bf-edits { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; color: var(--text-2); background: var(--bg-2); padding: 2px 8px; border-radius: 4px; }
+.pp-bf-row-arrow { color: var(--text-4); text-align: right; }
+.pp-bf-row:hover .pp-bf-row-arrow { color: var(--text-2); }
+
+.pp-bf-status {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11.5px; font-weight: 500;
+  padding: 2px 8px; border-radius: 999px;
+  white-space: nowrap;
+}
+.pp-bf-status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; }
+.pp-bf-st-exp { background: var(--good-soft); color: oklch(36% 0.1 150); }
+.pp-bf-st-exp::before { background: var(--good); }
+.pp-bf-st-draft { background: var(--bg-2); color: var(--text-3); }
+.pp-bf-st-draft::before { background: var(--text-4); }
+
+/* Brief detail — diff view */
+.pp-diff-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.pp-diff-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 16px 18px;
+  box-shadow: var(--shadow-sm);
+}
+.pp-diff-card-wide { grid-column: 1 / -1; }
+.pp-diff-card-l {
+  font-size: 11px; color: var(--text-3);
+  text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600;
+  margin-bottom: 10px;
+}
+.pp-diff-num {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 32px; font-weight: 600; letter-spacing: -0.025em;
+}
+.pp-diff-then { color: var(--text-4); }
+.pp-diff-now { color: var(--text); }
+.pp-diff-num svg { color: var(--text-4); }
+.pp-diff-delta {
+  font-family: var(--font-mono); font-size: 12.5px; font-weight: 600;
+  margin-top: 6px;
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  background: var(--bg-2); color: var(--text-3);
+}
+.pp-diff-delta.pp-diff-up { background: var(--good-soft); color: var(--good); }
+.pp-diff-delta.pp-diff-down { background: var(--bad-soft); color: var(--bad); }
+
+.pp-diff-card-body { display: flex; flex-direction: column; gap: 10px; }
+.pp-diff-card-wide .pp-diff-card-body { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.pp-diff-then-block, .pp-diff-now-block {
+  border-left: 2px solid var(--border);
+  padding: 4px 0 4px 12px;
+}
+.pp-diff-now-block { border-left-color: var(--accent); }
+.pp-diff-tag {
+  font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+  color: var(--text-3); margin-bottom: 4px;
+}
+.pp-diff-tag-now { color: var(--accent); }
+.pp-diff-then-block p, .pp-diff-now-block p { margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--text); }
+.pp-diff-then-block p { color: var(--text-3); }
+
+.pp-diff-narrative {
+  margin-top: 14px;
+  background: var(--surface);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--r-lg);
+  padding: 16px 18px;
+}
+.pp-diff-narrative-h {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; color: var(--accent); font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+.pp-diff-bullets { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.pp-diff-bullets li { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--text-2); line-height: 1.5; }
+.pp-diff-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--text-4); margin-top: 7px; flex: none; }
+.pp-diff-dot-new { background: var(--accent); }
+
+/* Brief snapshot card */
+.pp-snap-row {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  padding: 6px 0 14px;
+}
+.pp-snap-col {}
+.pp-snap-lbl { font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; margin-bottom: 4px; }
+.pp-snap-val { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.pp-snap-num { font-size: 18px; font-weight: 600; }
+.pp-snap-note {
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  font-size: 12px; color: var(--text-3); line-height: 1.5;
+}

@@ -1,0 +1,408 @@
+/* styles-extras.css — sidebar collapse, search dropdown, health tooltip,
+   plus narrow-mode adjustments when the co-pilot is open. */
+
+/* ─── Sidebar collapse ───────────────────────────────────────────────────── */
+.pp-app {
+  transition: grid-template-columns 0.2s ease;
+}
+.pp-app.pp-app-sidebar-collapsed { --side-w: 64px; }
+.pp-app.pp-app-sidebar-collapsed { grid-template-columns: 64px 1fr; }
+.pp-app.pp-app-sidebar-collapsed.pp-app-cp-open { grid-template-columns: 64px 1fr var(--cp-w); }
+
+.pp-side-collapsed { padding: 18px 8px; align-items: center; }
+.pp-side-collapsed .pp-side-brand { justify-content: center; padding: 4px 0 12px; }
+.pp-side-collapsed .pp-side-link {
+  justify-content: center;
+  padding: 9px 0;
+  width: 40px;
+  margin: 0 auto;
+}
+.pp-side-collapsed .pp-side-link span { display: none; }
+.pp-side-collapsed .pp-side-user {
+  justify-content: center;
+  padding: 0;
+}
+
+.pp-side-logo {
+  border: 0;
+  cursor: pointer;
+  transition: background 0.12s, transform 0.12s;
+}
+.pp-side-logo:hover { background: oklch(28% 0 0); transform: scale(1.05); }
+
+.pp-side-brand {
+  position: relative;
+}
+.pp-side-brand-text { flex: 1; min-width: 0; }
+.pp-side-toggle {
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-3);
+  display: grid; place-items: center;
+  opacity: 0;
+  transition: opacity 0.15s, background 0.12s, color 0.12s;
+  z-index: 20;
+  box-shadow: var(--shadow-sm);
+}
+.pp-side:hover .pp-side-toggle { opacity: 1; }
+.pp-side-toggle:hover { background: var(--text); color: var(--surface); border-color: var(--text); }
+
+/* ─── Search dropdown ────────────────────────────────────────────────────── */
+.pp-srch-wrap {
+  position: relative;
+  min-width: 320px;
+}
+.pp-srch-wrap .pp-search { transition: border-color 0.12s, box-shadow 0.12s; }
+.pp-srch-wrap.is-open .pp-search {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft), var(--shadow-sm);
+}
+.pp-srch-clear {
+  width: 18px; height: 18px;
+  border-radius: 4px;
+  background: var(--bg-2);
+  border: 0;
+  color: var(--text-3);
+  display: grid; place-items: center;
+}
+.pp-srch-clear:hover { background: var(--border); color: var(--text); }
+
+.pp-srch-pop {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0; right: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
+  max-height: 480px;
+  overflow-y: auto;
+  z-index: 100;
+  padding: 6px 4px 8px;
+  animation: pp-fade-down 0.14s ease-out;
+}
+@keyframes pp-fade-down {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.pp-srch-meta {
+  font-size: 10.5px; color: var(--text-3);
+  padding: 6px 12px 4px;
+  letter-spacing: 0.02em;
+  display: flex; justify-content: space-between;
+}
+.pp-srch-group { padding: 4px 0; }
+.pp-srch-group-h {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 12px 4px;
+  font-size: 10.5px; color: var(--text-3);
+  text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;
+}
+.pp-srch-group-h svg { color: var(--text-3); }
+.pp-srch-group-n {
+  font-family: var(--font-mono); font-size: 9.5px;
+  background: var(--bg-2); color: var(--text-3);
+  padding: 1px 6px; border-radius: 999px;
+  margin-left: auto;
+}
+.pp-srch-item {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%;
+  padding: 8px 12px;
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  text-align: left;
+  margin: 0 4px;
+  width: calc(100% - 8px);
+}
+.pp-srch-item.is-on { background: var(--bg-2); }
+.pp-srch-item:hover { background: var(--bg-2); }
+.pp-srch-item-l { flex: 1; min-width: 0; }
+.pp-srch-item-label { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 1px; }
+.pp-srch-item-sub { font-size: 11.5px; color: var(--text-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pp-srch-item svg { color: var(--text-4); flex: none; }
+.pp-srch-item.is-on svg { color: var(--text-2); }
+.pp-srch-hl { background: var(--accent-soft); color: var(--accent); padding: 0 1px; border-radius: 2px; font-weight: 600; }
+.pp-srch-empty {
+  padding: 24px 12px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-3);
+}
+
+/* ─── Health cell + tooltip ──────────────────────────────────────────────── */
+.pp-hcell {
+  display: inline-flex; align-items: center; gap: 6px;
+  cursor: default;
+  white-space: nowrap;
+  padding: 2px 6px;
+  margin: -2px -6px;
+  border-radius: 5px;
+}
+.pp-hcell:hover { background: var(--bg-2); }
+
+.pp-htip {
+  position: fixed;
+  z-index: 1000;
+  width: 320px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 14px 16px 12px;
+  font-size: 12.5px;
+  color: var(--text);
+  animation: pp-fade-down 0.12s ease-out;
+  pointer-events: none;
+}
+.pp-htip-h {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 10px;
+}
+.pp-htip-score { display: flex; align-items: center; gap: 6px; }
+.pp-htip-num { font-size: 18px; font-weight: 600; }
+.pp-htip-tier {
+  font-family: var(--font-mono);
+  font-size: 9.5px; font-weight: 700;
+  padding: 2px 7px; border-radius: 4px;
+  letter-spacing: 0.06em; text-transform: uppercase;
+}
+.pp-htip-tier-healthy { background: var(--good-soft); color: var(--good); }
+.pp-htip-tier-watch   { background: var(--warn-soft); color: oklch(45% 0.12 70); }
+.pp-htip-tier-at-risk { background: var(--bad-soft); color: var(--bad); }
+
+.pp-htip-explain {
+  color: var(--text-3); line-height: 1.45;
+  margin-bottom: 10px;
+}
+.pp-htip-drivers-h {
+  font-size: 10px;
+  color: var(--text-3);
+  text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600;
+  margin-bottom: 6px;
+}
+.pp-htip-drivers {
+  list-style: none; padding: 0; margin: 0 0 10px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.pp-htip-drivers li {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 8px; align-items: start;
+  font-size: 12px; line-height: 1.4;
+  color: var(--text-2);
+}
+.pp-htip-impact {
+  font-family: var(--font-mono); font-size: 10.5px; font-weight: 600;
+  padding: 2px 5px; border-radius: 3px;
+  text-align: center;
+}
+.pp-htip-up   { background: var(--good-soft); color: var(--good); }
+.pp-htip-down { background: var(--bad-soft);  color: var(--bad); }
+.pp-htip-flat { background: var(--bg-2);      color: var(--text-3); }
+
+.pp-htip-foot {
+  font-size: 11px; color: var(--text-4);
+  display: inline-flex; align-items: center; gap: 4px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+.pp-htip-foot svg { color: var(--accent); }
+
+/* ─── Table — keep Health column from crowding when narrow ───────────────── */
+.pp-app-cp-open .pp-tr {
+  grid-template-columns: 1.7fr 1fr 0.9fr 0.8fr 0.9fr 1fr 24px;
+  gap: 8px;
+  padding: 12px 14px;
+}
+.pp-app-cp-open .pp-th { padding: 10px 14px; }
+.pp-app-cp-open .pp-td-type,
+.pp-app-cp-open .pp-td-tier,
+.pp-app-cp-open .pp-td-qbr,
+.pp-app-cp-open .pp-td-status {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pp-app-cp-open .pp-status { padding: 2px 6px; font-size: 11px; }
+.pp-app-cp-open .pp-pill-tier { padding: 2px 6px; font-size: 10.5px; }
+.pp-app-cp-open .pp-partner-hq { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.pp-td-health { white-space: nowrap; }
+
+/* ─── Walkthrough button (floating) ──────────────────────────────────────── */
+.pp-watch-btn {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 40;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 12px;
+  background: var(--text);
+  color: var(--bg);
+  border: 0;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+}
+.pp-watch-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,0.18); }
+.pp-watch-btn svg { color: var(--bg); }
+
+/* ─── Intro card (first visit) ───────────────────────────────────────────── */
+.pp-intro-overlay {
+  position: fixed; inset: 0;
+  background: rgba(15, 15, 15, 0.42);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 80;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  animation: pp-fade 0.18s ease-out;
+}
+.pp-intro-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 32px 24px;
+  width: 100%; max-width: 480px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.22), 0 4px 12px rgba(0,0,0,0.08);
+  animation: pp-pop 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.pp-intro-eyebrow {
+  font-size: 11px; font-weight: 500;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+.pp-intro-title {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+}
+.pp-intro-body {
+  margin: 0 0 12px;
+  color: var(--text-2);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.pp-intro-body-muted { color: var(--text-3); }
+.pp-intro-actions {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  margin-top: 18px;
+}
+.pp-intro-btn {
+  appearance: none;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: background 0.12s, border-color 0.12s;
+}
+.pp-intro-btn:hover { background: var(--surface); border-color: var(--border-strong); }
+.pp-intro-btn-primary {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+.pp-intro-btn-primary:hover { background: oklch(28% 0 0); border-color: oklch(28% 0 0); }
+.pp-intro-btn-primary svg { color: var(--bg); }
+
+/* ─── Walkthrough video modal ────────────────────────────────────────────── */
+.pp-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(15, 15, 15, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 90;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  animation: pp-fade 0.18s ease-out;
+}
+.pp-modal {
+  position: relative;
+  background: var(--surface);
+  border-radius: 14px;
+  width: 100%; max-width: 960px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+  overflow: hidden;
+  animation: pp-pop 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.pp-modal-close {
+  position: absolute;
+  top: 10px; right: 10px;
+  z-index: 2;
+  width: 28px; height: 28px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  border: 0;
+  border-radius: 999px;
+  transition: background 0.12s;
+}
+.pp-modal-close:hover { background: rgba(0,0,0,0.8); }
+.pp-modal-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+.pp-modal-video iframe {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
+.pp-modal-placeholder {
+  padding: 56px 48px;
+  text-align: center;
+  color: var(--text-2);
+}
+.pp-modal-placeholder-icon {
+  width: 44px; height: 44px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--bg-2);
+  border-radius: 999px;
+  margin-bottom: 14px;
+  color: var(--text-2);
+}
+.pp-modal-placeholder h3 {
+  margin: 0 0 10px;
+  font-size: 18px; font-weight: 600;
+}
+.pp-modal-placeholder p {
+  margin: 0 auto;
+  max-width: 460px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-3);
+}
+.pp-modal-placeholder code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--bg-2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--text);
+}
+
+@keyframes pp-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes pp-pop {
+  from { opacity: 0; transform: translateY(8px) scale(0.985); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);     }
+}

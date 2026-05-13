@@ -1,0 +1,1080 @@
+// Partnership Pulse — partner dataset
+// Source: uploads/partners.json (read once at build, baked into window.DATA)
+window.DATA = {
+  "metadata": {
+    "owner": "Sarah Chen",
+    "owner_role": "Senior Partner Manager, Google Play, APAC",
+    "as_of_date": "2026-05-12",
+    "partner_count": 12,
+    "notes": "Fictional partners for Partnership Pulse prototype. All names, deals, and metrics are illustrative."
+  },
+  "partners": [
+    {
+      "id": "p001",
+      "name": "MapleArc Studios",
+      "type": "Game Studio",
+      "hq": "Seoul, South Korea",
+      "region": "APAC — Korea",
+      "tier": "Strategic",
+      "revenue_tier": "Top 25 globally",
+      "account_manager": "Sarah Chen",
+      "executive_sponsor_google": "Min-jae Park (Director, APAC Gaming)",
+      "executive_sponsor_partner": "Joon-ho Kim (CEO)",
+      "contract": {
+        "type": "Multi-year master agreement",
+        "renewal_date": "2026-06-30",
+        "status": "On track — renewal conversation initiated"
+      },
+      "next_qbr": "2026-05-19",
+      "last_qbr": "2026-02-12",
+      "health": {
+        "score": 87,
+        "trend_qoq": "+4",
+        "drivers": [
+          "Strong launch of Lumen: Stardrift (+8): #3 KR top grossing for 2 weeks",
+          "Sword Chronicles content update slipped 6 weeks (-2)",
+          "Exec sponsor relationship strengthened: CEO dinner attended in March (+1)",
+          "Pending Play Pass tier-1 inclusion driving forward momentum"
+        ]
+      },
+      "apps": [
+        {
+          "name": "Sword Chronicles: Awakening",
+          "genre": "MMORPG",
+          "launch_year": 2021,
+          "status": "Mature, stable revenue"
+        },
+        {
+          "name": "Mythhammer Tactics",
+          "genre": "Strategy",
+          "launch_year": 2023,
+          "status": "Growth"
+        },
+        {
+          "name": "Lumen: Stardrift",
+          "genre": "Mobile RPG",
+          "launch_year": 2026,
+          "status": "New launch — strong reception"
+        }
+      ],
+      "performance_recent_quarter": {
+        "play_revenue_qoq": "+18%",
+        "play_revenue_yoy": "+31%",
+        "mau_qoq": "+22%",
+        "highlights": "Lumen launch drove acquisition surge; ARPU steady on legacy titles"
+      },
+      "pipeline": [
+        {
+          "deal": "Play Pass tier-1 inclusion for Lumen",
+          "stage": "Term sheet drafted",
+          "value": "Multi-year placement, significant subscriber impact",
+          "blockers": [],
+          "expected_close": "2026-06"
+        },
+        {
+          "deal": "Sword Chronicles UGC feature launch",
+          "stage": "Policy review",
+          "value": "Engagement / retention play",
+          "blockers": [
+            "Policy team review on UGC moderation framework"
+          ],
+          "expected_close": "2026-Q3"
+        }
+      ],
+      "open_issues": [
+        "Sword Chronicles content update timeline at risk — partner engineering reports 6-week delay; impact on Q3 commitment"
+      ],
+      "wins_to_celebrate": [
+        "Lumen: Stardrift reached #3 KR top grossing for 2 consecutive weeks post-launch",
+        "Featured editorial placement secured in 8 APAC markets at launch"
+      ],
+      "recent_activity": [
+        {
+          "date": "2026-05-08",
+          "type": "meeting",
+          "summary": "Working session on Play Pass term sheet — partner pushed on exclusivity window; agreed to revisit"
+        },
+        {
+          "date": "2026-04-22",
+          "type": "email",
+          "summary": "CEO sent thank-you note for launch support; flagged interest in expanding to Latin America"
+        },
+        {
+          "date": "2026-04-15",
+          "type": "meeting",
+          "summary": "Tech sync on UGC moderation — partner committed to additional review tooling"
+        },
+        {
+          "date": "2026-03-29",
+          "type": "exec_meeting",
+          "summary": "CEO dinner with Director Park; discussed 3-year strategic roadmap"
+        }
+      ]
+    },
+    {
+      "id": "p002",
+      "name": "Tsuki Forge Entertainment",
+      "type": "Game Publisher",
+      "hq": "Tokyo, Japan",
+      "region": "APAC — Japan",
+      "tier": "Strategic",
+      "revenue_tier": "Top 50 globally",
+      "account_manager": "Sarah Chen",
+      "executive_sponsor_google": "Min-jae Park (Director, APAC Gaming)",
+      "executive_sponsor_partner": "CHANGED — formerly Hiroshi Tanaka (VP BD); now Yuki Sato (interim, ~6 weeks)",
+      "contract": {
+        "type": "Multi-year master agreement",
+        "renewal_date": "2026-09-30",
+        "status": "AT RISK — renewal discussions stalled"
+      },
+      "next_qbr": "2026-05-22",
+      "last_qbr": "2026-02-19",
+      "health": {
+        "score": 68,
+        "trend_qoq": "-9",
+        "drivers": [
+          "Stellar Vow revenue down 22% QoQ — competitive pressure from new genre entrant",
+          "Yokai Court policy violation incident in March (loot box disclosure) — appeal pending",
+          "Exec sponsor changed on partner side 6 weeks ago — relationship continuity disrupted",
+          "Two unanswered emails to new exec sponsor — engagement signal weak"
+        ]
+      },
+      "apps": [
+        {
+          "name": "Stellar Vow",
+          "genre": "Gacha RPG",
+          "launch_year": 2019,
+          "status": "Declining — competitive pressure"
+        },
+        {
+          "name": "Yokai Court",
+          "genre": "Card battler",
+          "launch_year": 2021,
+          "status": "Policy review pending"
+        },
+        {
+          "name": "Saga of Embers",
+          "genre": "Strategy",
+          "launch_year": 2023,
+          "status": "Stable"
+        }
+      ],
+      "performance_recent_quarter": {
+        "play_revenue_qoq": "-14%",
+        "play_revenue_yoy": "-8%",
+        "mau_qoq": "-11%",
+        "highlights": "Stellar Vow drag dominates portfolio; Saga of Embers stable but cannot offset"
+      },
+      "pipeline": [
+        {
+          "deal": "Master agreement renewal",
+          "stage": "Stalled",
+          "value": "Existing relationship continuation",
+          "blockers": [
+            "New exec sponsor not engaged",
+            "Partner hasn't responded to revised terms (3 weeks)"
+          ],
+          "expected_close": "Originally Q2; now uncertain"
+        }
+      ],
+      "open_issues": [
+        "Yokai Court policy appeal pending Google Policy team review — partner escalated to BD VP",
+        "Loot box disclosure remediation plan submitted but acknowledgment outstanding",
+        "Two unanswered emails to Yuki Sato (new exec sponsor) over past 3 weeks"
+      ],
+      "wins_to_celebrate": [
+        "Saga of Embers global expansion to LATAM completed on schedule",
+        "Policy remediation plan submitted ahead of deadline"
+      ],
+      "recent_activity": [
+        {
+          "date": "2026-05-06",
+          "type": "email",
+          "summary": "Outreach to Yuki Sato proposing renewal working session — no response"
+        },
+        {
+          "date": "2026-04-28",
+          "type": "meeting",
+          "summary": "Internal sync with Policy team on Yokai Court appeal status — review still in progress"
+        },
+        {
+          "date": "2026-04-14",
+          "type": "call",
+          "summary": "Brief call with Yuki Sato — introduction only; she requested time to ramp before renewal discussion"
+        },
+        {
+          "date": "2026-03-30",
+          "type": "escalation",
+          "summary": "Partner VP escalated policy review timeline concern to Director Park"
+        }
+      ]
+    },
+    {
+      "id": "p003",
+      "name": "Wavekit Games",
+      "type": "Game Studio (Casual)",
+      "hq": "Singapore",
+      "region": "APAC — SEA",
+      "tier": "Growth",
+      "revenue_tier": "Top 100 globally — rising",
+      "account_manager": "Sarah Chen",
+      "executive_sponsor_google": "Lin Wei (Lead, SEA Gaming)",
+      "executive_sponsor_partner": "Rachel Tan (Founder/CEO)",
+      "contract": {
+        "type": "Growth tier agreement",
+        "renewal_date": "2027-01-15",
+        "status": "Healthy — expansion conversation active"
+      },
+      "next_qbr": "2026-05-20",
+      "last_qbr": "2026-02-15",
+      "health": {
+        "score": 92,
+        "trend_qoq": "+6",
+        "drivers": [
+          "TileTales: Cottage Bloom hit #1 in 4 SEA markets (+5)",
+          "Billing integration partnership with Eng team launched successfully (+2)",
+          "LATAM expansion on track — soft launch metrics strong (+1)",
+          "Won Best Indie at Play Awards 2025 (+2)"
+        ]
+      },
+      "apps": [
+        {
+          "name": "TileTales: Cottage Bloom",
+          "genre": "Puzzle",
+          "launch_year": 2024,
+          "status": "Top performer — multi-market #1"
+        },
+        {
+          "name": "TileTales: Ocean Drift",
+          "genre": "Puzzle",
+          "launch_year": 2025,
+          "status": "Growth — riding franchise"
+        },
+        {
+          "name": "Puzzlebox Pets",
+          "genre": "Casual",
+          "launch_year": 2023,
+          "status": "Stable long-tail"
+        }
+      ],
+      "performance_recent_quarter": {
+        "play_revenue_qoq": "+34%",
+        "play_revenue_yoy": "+128%",
+        "mau_qoq": "+41%",
+        "highlights": "Hyper-growth quarter; TileTales franchise compounding; LATAM contributing 12% of new MAU"
+      },
+      "pipeline": [
+        {
+          "deal": "Featured placement deal for next TileTales title",
+          "stage": "Term sheet",
+          "value": "Multi-market launch placement",
+          "blockers": [],
+          "expected_close": "2026-06"
+        },
+        {
+          "deal": "Tier upgrade to Strategic (2027 renewal)",
+          "stage": "Early discussion",
+          "value": "Higher tier benefits, dedicated support",
+          "blockers": [
+            "Performance threshold review needed Q4 2026"
+          ],
+          "expected_close": "Renewal cycle"
+        }
+      ],
+      "open_issues": [],
+      "wins_to_celebrate": [
+        "Best Indie Game 2025 at Play Awards",
+        "TileTales: Cottage Bloom #1 in TH, ID, PH, VN simultaneously",
+        "Billing integration deployment completed 2 weeks ahead of schedule"
+      ],
+      "recent_activity": [
+        {
+          "date": "2026-05-09",
+          "type": "meeting",
+          "summary": "Roadmap review — partner shared 2026-27 title slate; 3 new launches planned"
+        },
+        {
+          "date": "2026-04-30",
+          "type": "email",
+          "summary": "CEO requested intro to Cloud team for backend scaling — facilitated"
+        },
+        {
+          "date": "2026-04-18",
+          "type": "exec_meeting",
+          "summary": "Lin Wei + CEO quarterly check-in — partner expressed high satisfaction"
+        }
+      ]
+    },
+    {
+      "id": "p004",
+      "name": "HanseoOne Electronics",
+      "type": "OEM",
+      "hq": "Suwon, South Korea",
+      "region": "APAC — Korea",
+      "tier": "Strategic",
+      "revenue_tier": "Top 5 OEM globally",
+      "account_manager": "Sarah Chen",
+      "executive_sponsor_google": "David Liu (Director, OEM Partnerships)",
+      "executive_sponsor_partner": "Sung-min Lee (VP, Mobile Experience)",
+      "contract": {
+        "type": "Pre-install master agreement (annual)",
+        "renewal_date": "2026-12-31",
+        "status": "AT RISK — 2026 terms not yet finalized"
+      },
+      "next_qbr": "2026-05-15",
+      "last_qbr": "2026-02-08",
+      "health": {
+        "score": 72,
+        "trend_qoq": "-3",
+        "drivers": [
+          "2026 pre-install agreement stuck in legal for 6 weeks (-4)",
+          "Galaxia S series launch successful with current agreement (+1)",
+          "Two recent partner meetings deferred — engagement signal weak",
+          "Escalation path to VP active but slow"
+        ]
+      },
+      "apps": [],
+      "performance_recent_quarter": {
+        "device_shipments_qoq": "+8%",
+        "play_active_devices_yoy": "+12%",
+        "highlights": "Strong device sell-through on Galaxia S26 launch; Play Store engagement on new devices above benchmark"
+      },
+      "pipeline": [
+        {
+          "deal": "2026 pre-install agreement for Galaxia S/Note/Fold lines",
+          "stage": "Legal review — stalled",
+          "value": "Strategic placement on flagship + mid-tier device lines",
+          "blockers": [
+            "Data sharing terms (GDPR / Korean PIPA compliance language)",
+            "Partner legal team requested 4 rounds of revisions",
+            "Internal escalation to David Liu and partner VP needed"
+          ],
+          "expected_close": "Originally Q1; now Q3 risk"
+        }
+      ],
+      "open_issues": [
+        "Two consecutive partner meetings deferred (April 22, May 5) by partner side",
+        "Legal terms iteration cycle exceeding normal SLA — 4 rounds with no convergence on data sharing language"
+      ],
+      "wins_to_celebrate": [
+        "Galaxia S26 launch (Q1 2026) — Play Store engagement metrics 14% above benchmark for new device cohort"
+      ],
+      "recent_activity": [
+        {
+          "date": "2026-05-05",
+          "type": "meeting_deferred",
+          "summary": "Scheduled legal sync deferred by partner — no new date proposed"
+        },
+        {
+          "date": "2026-04-29",
+          "type": "email",
+          "summary": "Partner counsel sent fourth revision of data sharing terms — still significant deltas from Google standard"
+        },
+        {
+          "date": "2026-04-22",
+          "type": "meeting_deferred",
+          "summary": "Quarterly tech review deferred — partner cited internal reorg"
+        },
+        {
+          "date": "2026-04-10",
+          "type": "escalation",
+          "summary": "Escalated legal timeline to David Liu; awaiting partner VP engagement"
+        }
+      ]
+    },
+    {
+      "id": "p005",
+      "name": "PaySamba",
+      "type": "Payments Partner",
+      "hq": "Mumbai, India",
+      "region": "APAC — India",
+      "tier": "Growth",
+      "revenue_tier": "Strategic for India market",
+      "account_manager": "Sarah Chen",
+      "executive_sponsor_google": "Priya Raman (Lead, India Payments)",
+      "executive_sponsor_partner": "Arjun Mehta (CTO)",
+      "contract": {
+        "type": "Integration partnership agreement",
+        "renewal_date": "2026-11-30",
+        "status": "On track"
+      },
+      "next_qbr": "2026-05-21",
+      "last_qbr": "2026-02-14",
+      "health": {
+        "score": 79,
+        "trend_qoq": "+1",
+        "drivers": [
+          "UPI billing integration testing complete (+3)",
+          "Compliance review pending — gating launch (-1)",
+          "Steady engineering engagement throughout build phase",
+          "First successful test transactions completed last week"
+        ]
+      },
+      "apps": [],
+      "performance_recent_quarter": {
+        "integration_progress": "95% complete",
+        "test_transaction_volume": "12,000 in pilot cohort",
+        "highlights": "Engineering integration on schedule; compliance review remains critical path"
+      },
+      "pipeline": [
+        {
+          "deal": "UPI billing integration v2 — production launch",
+          "stage": "Compliance review",
+          "value": "Unlocks Play billing for ~180M India UPI users",
+          "blockers": [
+            "RBI compliance attestation pending — partner counsel working on submission"
+          ],
+          "expected_close": "2026-Q3"
+        }
+      ],
+      "open_issues": [
+        "RBI compliance attestation timeline uncertain — partner estimates 4–8 weeks"
+      ],
+      "wins_to_celebrate": [
+        "First end-to-end test transactions completed successfully",
+        "Engineering integration 95% complete, on original schedule"
+      ],
+      "recent_activity": [
+        {
+          "date": "2026-05-07",
+          "type": "meeting",
+          "summary": "Eng + compliance sync — confirmed test transactions stable; compliance submission drafted"
+        },
+        {
+          "date": "2026-04-25",
+          "type": "demo",
+          "summary": "Internal demo of UPI flow to Priya Raman — positive reception"
+        },
+        {
+          "date": "2026-04-12",
+          "type": "email",
+          "summary": "Arjun shared compliance submission timeline estimate"
+        }
+      ]
+    },
+    {
+      "id": "p006",
+      "name": "Dragoncoast Interactive",
+      "type": "Game Publisher",
+      "hq": "Taipei, Taiwan",
+      "region": "APAC — Greater China",
+      "tier": "Strategic",
+      "revenue_tier": "Top 75 globally",
+      "account_manager": "Sarah Chen",
+      "executive_sponsor_google": "Min-jae Park (Director, APAC Gaming)",
+      "executive_sponsor_partner": "Wei-cheng Liu (VP BD)",
+      "contract": {
+        "type": "Multi-year master agreement",
+        "renewal_date": "2027-03-31",
+        "status": "Active — partner requested terms revisit mid-cycle"
+      },
+      "next_qbr": "2026-05-23",
+      "last_qbr": "2026-02-20",
+      "health": {
+        "score": 75,
+        "trend_qoq": "-2",
+        "drivers": [
+          "Wyrmlock Online revenue stable but not growing (-1)",
+          "Partner-initiated rev share renegotiation in flight (-2)",
+          "Empire of Tides expansion to KR/JP markets successful (+1)",
+          "Bone Lantern launch underperformed expectations"
+        ]
+      },
+      "apps": [
+        {
+          "name": "Wyrmlock Online",
+          "genre": "MMORPG",
+          "launch_year": 2020,
+          "status": "Mature — flat"
+        },
+        {
+          "name": "Empire of Tides",
+          "genre": "4X Strategy",
+          "launch_year": 2023,
+          "status": "Growth — new market expansion"
+        },
+        {
+          "name": "Bone Lantern",
+          "genre": "Horror RPG",
+          "launch_year": 2025,
+          "status": "Underperforming — niche audience"
+        }
+      ],
+      "performance_recent_quarter": {
+        "play_revenue_qoq": "+2%",
+        "play_revenue_yoy": "+5%",
+        "mau_qoq": "+4%",
+        "highlights": "Portfolio essentially flat; Empire of Tides expansion offsetting Bone Lantern underperformance"
+      },
+      "pipeline": [
+        {
+          "deal": "Mid-cycle rev share terms revisit (partner-initiated)",
+          "stage": "Negotiation — 2 months in",
+          "value": "Existing relationship continuity",
+          "blockers": [
+            "Partner asking for 3pt rev share reduction citing competitive offers",
+            "Internal analysis on precedent risk in progress"
+          ],
+          "expected_close": "Q3 2026"
+        }
+      ],
+      "open_issues": [
+        "Bone Lantern post-launch optimization plan requested by partner — Eng resource ask pending review",
+        "Partner has cited competitive distribution offers in negotiations — verifying claims"
+      ],
+      "wins_to_celebrate": [
+        "Empire of Tides successful expansion to Korea and Japan markets",
+        "Wyrmlock Online stable revenue maintained through challenging genre quarter"
+      ],
+      "recent_activity": [
+        {
+          "date": "2026-05-04",
+          "type": "meeting",
+          "summary": "Negotiation session — partner reiterated rev share ask; presented counter-proposal on placement value"
+        },
+        {
+          "date": "2026-04-19",
+          "type": "email",
+          "summary": "Partner shared competitive distribution proposal (high-level, no specifics)"
+        },
+        {
+          "date": "2026-04-02",
+          "type": "meeting",
+          "summary": "Quarterly review — discussed Bone Lantern optimization paths"
+        }
+      ]
+    },
+    {
+      "id": "p007",
+      "name": "Coral Reef Studios",
+      "type": "Indie Game Studio",
+      "hq": "Melbourne, Australia",
+      "region": "APAC — ANZ",
+      "tier": "Emerging",
+      "revenue_tier": "Top 500 — rising",
+      "account_manager": "Sarah Chen",
+      "executive_sponsor_google": "Lin Wei (Lead, SEA Gaming) — also covers ANZ indies",
+      "executive_sponsor_partner": "Marcus Holloway (Co-founder)",
+      "contract": {
+        "type": "Indie partner program",
+        "renewal_date": "2026-08-31",
+        "status": "Healthy — Play Pass GA conversation active"
+      },
+      "next_qbr": "2026-05-18",
+      "last_qbr": "2026-02-13",
+      "health": {
+        "score": 88,
+        "trend_qoq": "+12",
+        "drivers": [
+          "Play Pass beta inclusion won (+5)",
+          "Lighthouse Stories featured editorial in 6 regions (+4)",
+          "Strong critical reception — 89 Metacritic, multiple GOTY shortlists (+3)"
+        ]
+      },
+      "apps": [
+        {
+          "name": "Lighthouse Stories",
+          "genre": "Narrative Adventure",
+          "launch_year": 2025,
+          "status": "Critical hit — building audience"
+        }
+      ],
+      "performance_recent_quarter": {
+        "play_revenue_qoq": "+67%",
+        "play_revenue_yoy": "N/A (new partner)",
+        "mau_qoq": "+88%",
+        "highlights": "Strong post-Play Pass momentum; expanded audience beyond core narrative genre"
+      },
+      "pipeline": [
+        {
+          "deal": "Play Pass GA inclusion (graduating from beta)",
+          "stage": "Term discussion",
+          "value": "Sustained Play Pass placement post-beta",
+          "blockers": [],
+          "expected_close": "2026-Q3"
+        },
+        {
+          "deal": "Next title pitch — early discussion",
+          "stage": "Pre-pitch",
+          "value": "Studio's second title — pitched verbally last meeting",
+          "blockers": [
+            "Studio still scoping; no concrete proposal yet"
+          ],
+          "expected_close": "TBD"
+        }
+      ],
+      "open_issues": [],
+      "wins_to_celebrate": [
+        "Play Pass beta inclusion led to 88% MAU growth in single quarter",
+        "Featured editorial placement in US, UK, AU, DE, FR, JP",
+        "Metacritic 89 / shortlisted for 4 GOTY awards"
+      ],
+      "recent_activity": [
+        {
+          "date": "2026-05-10",
+          "type": "meeting",
+          "summary": "Play Pass GA term discussion — partner enthusiastic; minimal friction expected"
+        },
+        {
+          "date": "2026-04-26",
+          "type": "meeting",
+          "summary": "Studio pitched concept for second title — narrative-adjacent, broader appeal"
+        },
+        {
+          "date": "2026-04-08",
+          "type": "email",
+          "summary": "Marcus shared post-launch performance memo — highlighted Play Pass impact"
+        }
+      ]
+    },
+    {
+      "id": "p008",
+      "name": "TaraGo",
+      "type": "Super-app",
+      "hq": "Jakarta, Indonesia",
+      "region": "APAC — SEA",
+      "tier": "Strategic",
+      "revenue_tier": "Top SEA partner",
+      "account_manager": "Sarah Chen",
+      "executive_sponsor_google": "Lin Wei (Lead, SEA Gaming) — also SEA payments",
+      "executive_sponsor_partner": "Bambang Surya (CPO)",
+      "contract": {
+        "type": "Strategic partnership — payments + commerce",
+        "renewal_date": "2027-06-30",
+        "status": "Active — steady"
+      },
+      "next_qbr": "2026-05-16",
+      "last_qbr": "2026-02-10",
+      "health": {
+        "score": 81,
+        "trend_qoq": "0",
+        "drivers": [
+          "Steady transaction volume in core categories (0)",
+          "GoBilling category expansion conversations progressing",
+          "Quarterly tech review held — action items being executed"
+        ]
+      },
+      "apps": [],
+      "performance_recent_quarter": {
+        "transaction_volume_qoq": "+6%",
+        "active_categories": 14,
+        "highlights": "Stable growth in established categories; new category expansion on roadmap"
+      },
+      "pipeline": [
+        {
+          "deal": "GoBilling expansion to subscription content categories",
+          "stage": "Scoping",
+          "value": "Unlocks subscription billing for partner's content vertical",
+          "blockers": [
+            "Technical scoping in progress on both sides"
+          ],
+          "expected_close": "2026-Q4"
+        }
+      ],
+      "open_issues": [
+        "5 action items from Q1 tech review still open — partner team capacity cited"
+      ],
+      "wins_to_celebrate": [
+        "Transaction volume stable through Ramadan period (historically volatile)",
+        "Q1 tech review identified 5 actionable improvements"
+      ],
+      "recent_activity": [
+        {
+          "date": "2026-05-02",
+          "type": "meeting",
+          "summary": "Quarterly tech review — surfaced billing reconciliation improvement opportunity"
+        },
+        {
+          "date": "2026-04-20",
+          "type": "email",
+          "summary": "Bambang confirmed interest in subscription category expansion"
+        },
+        {
+          "date": "2026-03-28",
+          "type": "meeting",
+          "summary": "Action items review from prior quarter — 5 of 8 closed"
+        }
+      ]
+    },
+    {
+      "id": "p009",
+      "name": "NomNom Games",
+      "type": "Game Studio (Mobile)",
+      "hq": "Ho Chi Minh City, Vietnam",
+      "region": "APAC — SEA",
+      "tier": "Emerging — New Partner",
+      "revenue_tier": "Pre-launch",
+      "account_manager": "Sarah Chen",
+      "executive_sponsor_google": "Lin Wei (Lead, SEA Gaming)",
+      "executive_sponsor_partner": "Thu Nguyen (Founder)",
+      "contract": {
+        "type": "Standard developer agreement + emerging partner program",
+        "renewal_date": "N/A — first cycle",
+        "status": "Onboarding"
+      },
+      "next_qbr": "2026-05-25 (FIRST QBR)",
+      "last_qbr": null,
+      "health": {
+        "score": 65,
+        "trend_qoq": "N/A — new partner",
+        "drivers": [
+          "Onboarding in progress — first launch targeted Q3 2026",
+          "Console access provisioning DELAYED — blocking dev work (-)",
+          "Three of four onboarding sessions completed",
+          "Founder engaged and responsive"
+        ]
+      },
+      "apps": [
+        {
+          "name": "FoodFight Royale",
+          "genre": "Casual Battle",
+          "launch_year": "2026 (planned)",
+          "status": "Pre-launch — soft launch Q3"
+        }
+      ],
+      "performance_recent_quarter": {
+        "onboarding_completion": "75%",
+        "highlights": "Standard onboarding pace; console access blocker is only concrete issue"
+      },
+      "pipeline": [
+        {
+          "deal": "Standard onboarding + first launch placement",
+          "stage": "Onboarding",
+          "value": "Foundation for emerging partner relationship",
+          "blockers": [
+            "Play Console access provisioning — open ticket with internal IT, 11 days"
+          ],
+          "expected_close": "Onboarding completion Q2"
+        }
+      ],
+      "open_issues": [
+        "Play Console access provisioning ticket open 11 days — blocking partner from accessing analytics and build management",
+        "Final onboarding session not yet scheduled"
+      ],
+      "wins_to_celebrate": [
+        "Three of four onboarding sessions completed without friction",
+        "Founder positively engaged — responsive within 24 hrs typically"
+      ],
+      "recent_activity": [
+        {
+          "date": "2026-05-09",
+          "type": "support_ticket",
+          "summary": "Internal IT ticket on console access provisioning escalated"
+        },
+        {
+          "date": "2026-04-30",
+          "type": "meeting",
+          "summary": "Third onboarding session — covered policy and content guidelines"
+        },
+        {
+          "date": "2026-04-15",
+          "type": "meeting",
+          "summary": "Second onboarding session — covered billing and monetization"
+        }
+      ]
+    },
+    {
+      "id": "p010",
+      "name": "Crane & Carp Publishing",
+      "type": "Game Publisher (Legacy)",
+      "hq": "Osaka, Japan",
+      "region": "APAC — Japan",
+      "tier": "Strategic — UNDER REVIEW for tier downgrade",
+      "revenue_tier": "Declining — Top 200",
+      "account_manager": "Sarah Chen",
+      "executive_sponsor_google": "Min-jae Park (Director, APAC Gaming)",
+      "executive_sponsor_partner": "Takeshi Watanabe (President) — minimally engaged",
+      "contract": {
+        "type": "Multi-year master agreement",
+        "renewal_date": "2026-10-31",
+        "status": "Tier review pending — relationship status uncertain"
+      },
+      "next_qbr": "2026-05-26",
+      "last_qbr": "2026-02-21 (partner attended late, abbreviated)",
+      "health": {
+        "score": 54,
+        "trend_qoq": "-7",
+        "drivers": [
+          "No new launches in 9 months (-3)",
+          "MAU declining 15% QoQ across portfolio (-3)",
+          "Partner unresponsive to last two outreach attempts (-2)",
+          "Last meaningful interaction 4 months ago",
+          "Internal tier review in progress"
+        ]
+      },
+      "apps": [
+        {
+          "name": "Edo Legends",
+          "genre": "Historical RPG",
+          "launch_year": 2017,
+          "status": "Declining — long-tail"
+        },
+        {
+          "name": "Kraken Tide",
+          "genre": "Strategy",
+          "launch_year": 2018,
+          "status": "Declining — minimal updates"
+        }
+      ],
+      "performance_recent_quarter": {
+        "play_revenue_qoq": "-18%",
+        "play_revenue_yoy": "-31%",
+        "mau_qoq": "-15%",
+        "highlights": "Across-the-board decline; no signals of investment in revival"
+      },
+      "pipeline": [],
+      "open_issues": [
+        "No response to two outreach attempts over past 6 weeks",
+        "Tier downgrade decision needed before renewal cycle begins (Q3)",
+        "Unclear whether partner intends to renew at all"
+      ],
+      "wins_to_celebrate": [],
+      "recent_activity": [
+        {
+          "date": "2026-05-01",
+          "type": "email_unanswered",
+          "summary": "Outreach to Watanabe proposing strategic discussion — no response (3 weeks)"
+        },
+        {
+          "date": "2026-04-08",
+          "type": "email_unanswered",
+          "summary": "QBR scheduling outreach — no response"
+        },
+        {
+          "date": "2026-02-21",
+          "type": "meeting",
+          "summary": "Q1 QBR — partner joined 20 min late, departed early; no substantive roadmap discussion"
+        },
+        {
+          "date": "2026-01-15",
+          "type": "meeting",
+          "summary": "Last substantive working session — discussed declining engagement but no commitments"
+        }
+      ]
+    },
+    {
+      "id": "p011",
+      "name": "Ondo Toons",
+      "type": "Content Platform — Webtoons",
+      "hq": "Seoul, South Korea",
+      "region": "APAC — Korea",
+      "tier": "Growth",
+      "revenue_tier": "Top 50 in Books & Reference",
+      "account_manager": "Sarah Chen",
+      "executive_sponsor_google": "Min-jae Park (Director, APAC) — secondary",
+      "executive_sponsor_partner": "Ji-woo Han (Head of Platform)",
+      "contract": {
+        "type": "Subscription content partner agreement",
+        "renewal_date": "2026-12-31",
+        "status": "Healthy"
+      },
+      "next_qbr": "2026-05-17",
+      "last_qbr": "2026-02-11",
+      "health": {
+        "score": 84,
+        "trend_qoq": "+3",
+        "drivers": [
+          "Subscription billing integration deployed successfully (+2)",
+          "ARPU up 18% post-integration (+2)",
+          "Top 10 in Books & Reference KR (+1)",
+          "Cross-promo opportunities under discussion with gaming partners"
+        ]
+      },
+      "apps": [
+        {
+          "name": "Ondo Toons",
+          "genre": "Comics / Subscription Content",
+          "launch_year": 2019,
+          "status": "Growth — subscription pivot successful"
+        }
+      ],
+      "performance_recent_quarter": {
+        "play_revenue_qoq": "+22%",
+        "subscriber_count_qoq": "+14%",
+        "arpu_qoq": "+18%",
+        "highlights": "Subscription billing migration completed; ARPU lift exceeds projections"
+      },
+      "pipeline": [
+        {
+          "deal": "Cross-promo with gaming partners (TBD)",
+          "stage": "Early exploration",
+          "value": "Distribution and audience expansion",
+          "blockers": [
+            "Identifying right gaming partner fit"
+          ],
+          "expected_close": "2026-Q4"
+        }
+      ],
+      "open_issues": [],
+      "wins_to_celebrate": [
+        "Subscription billing integration deployed without incident",
+        "Top 10 KR Books & Reference — first time hitting this rank",
+        "ARPU growth 18% QoQ exceeds typical content category"
+      ],
+      "recent_activity": [
+        {
+          "date": "2026-05-03",
+          "type": "meeting",
+          "summary": "Post-launch review of subscription billing — performance exceeded targets"
+        },
+        {
+          "date": "2026-04-21",
+          "type": "email",
+          "summary": "Ji-woo proposed cross-promo concept with mobile RPG partner"
+        },
+        {
+          "date": "2026-04-05",
+          "type": "meeting",
+          "summary": "Editorial planning for upcoming feature placements"
+        }
+      ]
+    },
+    {
+      "id": "p012",
+      "name": "Equinox Pacific",
+      "type": "Regional Gaming Hub (Multi-Studio)",
+      "hq": "Singapore",
+      "region": "APAC — SEA",
+      "tier": "Strategic",
+      "revenue_tier": "Top 60 globally (aggregate)",
+      "account_manager": "Sarah Chen",
+      "executive_sponsor_google": "Lin Wei (Lead, SEA Gaming)",
+      "executive_sponsor_partner": "Aisha Rahman (Head of Partnerships)",
+      "contract": {
+        "type": "Master agreement covering 8 studio network",
+        "renewal_date": "2026-09-30",
+        "status": "Active — renewal cycle imminent"
+      },
+      "next_qbr": "2026-05-24",
+      "last_qbr": "2026-02-17",
+      "health": {
+        "score": 78,
+        "trend_qoq": "-1",
+        "drivers": [
+          "Portfolio is mixed: 3 thriving studios (+), 3 stable (0), 2 declining (-)",
+          "Two studio-level escalations active",
+          "Master agreement renewal Q3 — preparation underway",
+          "Aggregate metrics stable but masking studio-level variance"
+        ]
+      },
+      "apps": [
+        {
+          "name": "(8 titles across studio network — varied)",
+          "genre": "Mixed",
+          "launch_year": "varied",
+          "status": "Mixed performance"
+        }
+      ],
+      "performance_recent_quarter": {
+        "aggregate_revenue_qoq": "+3%",
+        "studio_performance_distribution": "3 growth / 3 stable / 2 decline",
+        "highlights": "Stable aggregate, but two-studio drag emerging; renewal discussion needs studio-level lens"
+      },
+      "pipeline": [
+        {
+          "deal": "Master agreement renewal (Q3 2026)",
+          "stage": "Preparation",
+          "value": "Continuation of 8-studio network agreement",
+          "blockers": [
+            "Studio-level performance variance — renewal may need restructuring"
+          ],
+          "expected_close": "Q3 2026"
+        }
+      ],
+      "open_issues": [
+        "Two studio-level escalations — one on revenue share calculation, one on policy review timeline",
+        "Renewal preparation requires studio-by-studio performance review — not yet started"
+      ],
+      "wins_to_celebrate": [
+        "Aggregate portfolio stable through challenging quarter",
+        "Three growth studios continuing strong trajectory"
+      ],
+      "recent_activity": [
+        {
+          "date": "2026-05-06",
+          "type": "meeting",
+          "summary": "Quarterly portfolio review with Aisha — discussed two underperforming studios"
+        },
+        {
+          "date": "2026-04-23",
+          "type": "escalation",
+          "summary": "Revenue share calculation dispute for one studio — Finance team engaged"
+        },
+        {
+          "date": "2026-04-09",
+          "type": "email",
+          "summary": "Aisha requested early renewal discussion given portfolio variance"
+        }
+      ]
+    }
+  ]
+};
+window.PARTNERS = window.DATA.partners;
+window.PARTNERS_BY_ID = Object.fromEntries(window.PARTNERS.map(p => [p.id, p]));
+
+
+// ─── Brief history mock ──────────────────────────────────────────────────────
+// Each entry represents a brief generated for a past QBR. The "state" field
+// captures the partner's snapshot at that moment so we can show side-by-side
+// comparisons with the current quarter.
+
+window.BRIEF_HISTORY = [
+  // Q1 2026 — exported briefs
+  { id: "b001", partnerId: "p001", partner: "MapleArc Studios", quarter: "Q1 2026", generatedAt: "2026-02-09T08:14:00", status: "exported", exportFormat: "slides", editCount: 3, thumbsUp: 6, thumbsDown: 0, edited: ["talking_points"], state: { health: 83, trend: "+5", headline: "Healthy strategic partner with Lumen launch on horizon; renewal conversation should anchor on co-marketing." } },
+  { id: "b002", partnerId: "p002", partner: "Tsuki Forge Entertainment", quarter: "Q1 2026", generatedAt: "2026-02-17T07:48:00", status: "exported", exportFormat: "doc", editCount: 1, thumbsUp: 5, thumbsDown: 1, edited: ["risks"], state: { health: 77, trend: "+2", headline: "Steady performer; Stellar Vow soft but Saga of Embers strong. No material risks." } },
+  { id: "b003", partnerId: "p003", partner: "Wavekit Games", quarter: "Q1 2026", generatedAt: "2026-02-13T09:02:00", status: "exported", exportFormat: "slides", editCount: 0, thumbsUp: 7, thumbsDown: 0, edited: [], state: { health: 86, trend: "+8", headline: "Hyper-growth indie; TileTales franchise compounding; expansion conversation primed." } },
+  { id: "b004", partnerId: "p004", partner: "HanseoOne Electronics", quarter: "Q1 2026", generatedAt: "2026-02-05T11:31:00", status: "exported", exportFormat: "doc", editCount: 4, thumbsUp: 3, thumbsDown: 2, edited: ["risks", "actions"], state: { health: 75, trend: "0", headline: "Legal review on 2026 pre-install agreement ongoing; tracking; flagship launch healthy." } },
+  { id: "b005", partnerId: "p006", partner: "Dragoncoast Interactive", quarter: "Q1 2026", generatedAt: "2026-02-18T08:55:00", status: "exported", exportFormat: "doc", editCount: 2, thumbsUp: 4, thumbsDown: 1, edited: ["pipeline"], state: { health: 77, trend: "+1", headline: "Flat quarter; Empire of Tides expansion offsetting Bone Lantern underperformance." } },
+  { id: "b006", partnerId: "p007", partner: "Coral Reef Studios", quarter: "Q1 2026", generatedAt: "2026-02-11T10:17:00", status: "exported", exportFormat: "doc", editCount: 0, thumbsUp: 5, thumbsDown: 0, edited: [], state: { health: 76, trend: "+18", headline: "Strong Play Pass beta inclusion; reception exceeding expectations; lean into momentum." } },
+  { id: "b007", partnerId: "p008", partner: "TaraGo", quarter: "Q1 2026", generatedAt: "2026-02-07T08:33:00", status: "exported", exportFormat: "pdf", editCount: 1, thumbsUp: 3, thumbsDown: 0, edited: ["wins"], state: { health: 81, trend: "+1", headline: "Steady super-app partner; on plan; GoBilling expansion in scoping." } },
+  { id: "b008", partnerId: "p010", partner: "Crane & Carp Publishing", quarter: "Q1 2026", generatedAt: "2026-02-19T12:09:00", status: "draft", exportFormat: null, editCount: 0, thumbsUp: 1, thumbsDown: 2, edited: [], state: { health: 61, trend: "-4", headline: "Engagement declining; portfolio aging; recommend explicit strategic conversation." } },
+  { id: "b009", partnerId: "p011", partner: "Ondo Toons", quarter: "Q1 2026", generatedAt: "2026-02-09T07:42:00", status: "exported", exportFormat: "doc", editCount: 1, thumbsUp: 6, thumbsDown: 0, edited: ["performance"], state: { health: 81, trend: "+6", headline: "Subscription pivot continuing to pay off; ARPU lift exceeds plan." } },
+  { id: "b010", partnerId: "p012", partner: "Equinox Pacific", quarter: "Q1 2026", generatedAt: "2026-02-15T09:21:00", status: "exported", exportFormat: "slides", editCount: 5, thumbsUp: 4, thumbsDown: 1, edited: ["pipeline", "risks", "actions"], state: { health: 79, trend: "0", headline: "Aggregate stable; two studios drag emerging; renewal prep underway." } },
+
+  // Q2 2026 — in-progress drafts (this quarter)
+  { id: "b011", partnerId: "p005", partner: "PaySamba", quarter: "Q2 2026", generatedAt: "2026-05-10T10:11:00", status: "draft", exportFormat: null, editCount: 0, thumbsUp: 2, thumbsDown: 0, edited: [], state: { health: 79, trend: "+1", headline: "UPI integration nearly complete; compliance is critical path; engineering signal positive." } },
+  { id: "b012", partnerId: "p007", partner: "Coral Reef Studios", quarter: "Q2 2026", generatedAt: "2026-05-11T08:02:00", status: "draft", exportFormat: null, editCount: 0, thumbsUp: 0, thumbsDown: 0, edited: [], state: { health: 88, trend: "+12", headline: "Continued strong post-Play-Pass momentum; second title pitch under discussion." } },
+];
+
+// AI quality / eval mock data
+window.EVAL_METRICS = {
+  // Section-level edit + thumbs-down rates over last 60 days
+  sections: [
+    { id: "snapshot",       label: "Snapshot",         briefsGenerated: 47, editRate: 0.04, thumbsDown: 0.02, avgConfidence: 0.94 },
+    { id: "health",         label: "Health score",     briefsGenerated: 47, editRate: 0.11, thumbsDown: 0.06, avgConfidence: 0.88 },
+    { id: "performance",    label: "Performance",      briefsGenerated: 47, editRate: 0.06, thumbsDown: 0.04, avgConfidence: 0.96 },
+    { id: "pipeline",       label: "Pipeline",         briefsGenerated: 47, editRate: 0.09, thumbsDown: 0.04, avgConfidence: 0.92 },
+    { id: "risks",          label: "Top risks",        briefsGenerated: 47, editRate: 0.31, thumbsDown: 0.18, avgConfidence: 0.74 },
+    { id: "wins",           label: "Wins",             briefsGenerated: 47, editRate: 0.05, thumbsDown: 0.02, avgConfidence: 0.91 },
+    { id: "talking_points", label: "Talking points",   briefsGenerated: 47, editRate: 0.22, thumbsDown: 0.09, avgConfidence: 0.81 },
+    { id: "actions",        label: "Pre-meeting actions", briefsGenerated: 47, editRate: 0.14, thumbsDown: 0.05, avgConfidence: 0.86 },
+  ],
+  // 8-week eval set scores (0-100, % of synthetic briefs scoring \u22653/5 by senior PMs)
+  evalScores: [62, 68, 71, 74, 78, 81, 79, 84],
+  // Source freshness
+  freshness: {
+    "Play Console":  { hours: 0.1, status: "fresh" },
+    "CRM (deals)":   { hours: 0.6, status: "fresh" },
+    "Activity log":  { hours: 0.2, status: "fresh" },
+    "Open issues":   { hours: 3.4, status: "fresh" },
+    "Policy queue":  { hours: 47,  status: "stale" },
+  },
+  // Common edit categories (from edit-distance analysis)
+  topEdits: [
+    { section: "risks", category: "Soften severity language", count: 8 },
+    { section: "risks", category: "Re-rank by partner-specific context", count: 5 },
+    { section: "talking_points", category: "Reorder for conversational flow", count: 11 },
+    { section: "talking_points", category: "Personalize for sponsor", count: 6 },
+    { section: "actions", category: "Reassign owner", count: 7 },
+  ],
+};
+
+// Sarah's productivity stats (90 days)
+window.PRODUCTIVITY = {
+  briefsGenerated: 47,
+  hoursSaved: 138,  // self-reported pre/post
+  prepTimeBefore: "3h 50m",
+  prepTimeAfter: "22m",
+  usageRate: 0.86, // % of QBRs using Pulse
+  csat: 4.3,
+};
