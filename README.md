@@ -4,7 +4,7 @@ An AI co-pilot for partner managers — a working prototype that compresses Quar
 
 **Live demo:** https://partnership-pulse.vercel.app
 
-This repo contains the PRD I wrote and the clickable prototype I built to make the product concrete.
+This repo contains the PRD and a clickable prototype that makes the product concrete.
 
 ## What's in here
 
@@ -29,7 +29,7 @@ This repo contains the PRD I wrote and the clickable prototype I built to make t
 
 ## How it was built
 
-The prototype was built using [Claude Design](https://claude.ai/design) for the initial HTML/CSS/JSX scaffold, then iterated on with Claude Code (Sonnet/Opus) for the carousel, tooltip popovers, mock co-pilot routing, product tour, and deployment. AI-assisted prototyping is increasingly part of how I work as a PM — the goal isn't to be the engineer who ships it, but to make the product concrete enough that the conversation with engineering and design starts somewhere real.
+Initial HTML/CSS/JSX scaffold via [Claude Design](https://claude.ai/design), then iterated on with Claude Code for the carousel, tooltip popovers, mock co-pilot routing, product tour, and deployment.
 
 ## Running locally
 
@@ -40,7 +40,3 @@ cd project
 python3 -m http.server 8765
 # open http://localhost:8765
 ```
-
-## About me
-
-I'm a Senior PM at Oracle working on integrating LLMs and agentic systems into enterprise workflows, with 6 patents in that space. If the work resonates, I'd love to talk.

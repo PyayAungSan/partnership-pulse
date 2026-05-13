@@ -1,7 +1,6 @@
 # Partnership Pulse
 
 **Product Requirements Document — Draft v0.1**
-Author: [Your name] · GP Studio · For internal review
 
 ---
 
