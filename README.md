@@ -27,10 +27,6 @@ This repo contains the PRD and a clickable prototype that makes the product conc
 | The data model (`uploads/partners.json`) — 12 fictional partners with health, pipeline, issues, recent activity | The "refreshed 6 min ago" indicator |
 | The prototype interactions, carousel, tooltips, tour | Auth, persistence, real CRM/perf integrations |
 
-## How it was built
-
-Initial HTML/CSS/JSX scaffold via [Claude Design](https://claude.ai/design), then iterated on with Claude Code for the carousel, tooltip popovers, mock co-pilot routing, product tour, and deployment.
-
 ## Running locally
 
 No build step. Serve the `project/` folder over HTTP:
