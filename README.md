@@ -4,7 +4,7 @@ An AI co-pilot for partner managers — a working prototype that compresses Quar
 
 **Live demo:** https://partnership-pulse.vercel.app
 
-This repo contains the PRD I wrote and the clickable prototype I built to make the product concrete. It's an unsolicited piece of work I put together as part of applying to a PM role at Google focused on AI in the partner motion.
+This repo contains the PRD I wrote and the clickable prototype I built to make the product concrete.
 
 ## What's in here
 
