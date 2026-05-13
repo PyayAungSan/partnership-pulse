@@ -93,18 +93,18 @@ Quotes (to validate in user research):
 
 ## Stakeholders & engagement
 
-Mapping who's involved, what they care about, and how I'd engage them. Goes deeper than the JD's "engineering, UX, and business stakeholders as well as peers on the GP Studio team" framing.
+Mapping who's involved, what they care about, and how the PM should engage them.
 
 ### Sponsors & decision-makers
-- **GP Studio leadership** *(direct manager + skip-level)* — owns roadmap and resourcing. Cares about: portfolio coherence with other GP Studio bets, ROI defensibility. *Engage:* monthly written update, quarterly review.
-- **Play BD VP / Partnership Directors** *(economic buyer)* — cares about partner manager capacity, partnership health visibility, risk surfacing. *Engage:* pilot results readout, QBR-style updates.
-- **GBO leadership** *(adjacent sponsor)* — cares about cross-org applicability (Ads, Cloud partnerships). *Engage:* readout after Q1 milestone, not before.
+- **Product leadership** *(direct manager + skip-level)* — owns roadmap and resourcing. Cares about: portfolio coherence with other product bets, ROI defensibility. *Engage:* monthly written update, quarterly review.
+- **Partnerships VP / Partnership Directors** *(economic buyer)* — cares about partner manager capacity, partnership health visibility, risk surfacing. *Engage:* pilot results readout, QBR-style updates.
+- **Adjacent org leadership** — cares about cross-org applicability (other partnership motions). *Engage:* readout after Q1 milestone, not before.
 
-### Build team (GP Studio + close partners)
+### Build team
 - **Engineering lead** — co-owner. Architecture, infra, AI integration patterns. *Engage:* daily; paired on technical trade-offs.
 - **UX lead** — partner manager workflows, brief design, trust UI patterns (source links, confidence cues). *Engage:* weekly design crits, paired user research.
 - **Data Science / ML** — health score model, eval infrastructure, error analysis loop. *Engage:* weekly during build; embedded in eval rituals post-launch.
-- **AI Infra team** *(Gemini / internal model access)* — inference patterns, latency budget, capacity planning. *Engage:* kickoff sync, then async.
+- **AI Infra team** — inference patterns, latency budget, capacity planning. *Engage:* kickoff sync, then async.
 
 ### End users (must drive design)
 - **Pilot cohort (10 partner managers)** — co-design brief structure and section priorities. *Engage:* 5 interviews pre-PRD, weekly office hours during pilot, brief-level thumbs feedback always-on.
@@ -114,15 +114,15 @@ Mapping who's involved, what they care about, and how I'd engage them. Goes deep
 ### Governance & risk owners
 - **Privacy / Legal** — partner data handling, cross-region constraints, what the model can see. *Engage **early*** — this gates architecture, not launch.
 - **Security review** — internal tool but sensitive partner data; access controls and audit logging.
-- **AI Principles review** — required for any Google AI product. *Engage:* pre-pilot, with documented risks and mitigations drawn directly from the AI Quality Plan.
+- **AI Principles / Responsible AI review** — required for any AI-powered product. *Engage:* pre-pilot, with documented risks and mitigations drawn directly from the AI Quality Plan.
 
 ### Adjacent product teams (dependencies)
 - **CRM platform team** — read access in v1, writeback in v2. Hard dependency on API stability and partner data schema.
-- **Play Console / analytics team** — performance data source. Need a data freshness SLA.
-- **Play Policy team** — escalations data; potential downstream consumer for joint policy review meetings.
+- **Analytics platform team** — performance data source. Need a data freshness SLA.
+- **Policy team** — escalations data; potential downstream consumer for joint policy review meetings.
 
-### Peers on GP Studio
-- Other PMs on GP Studio working adjacent surfaces (deal workflow tools, partner-facing portals, contract automation). *Engage:* weekly team sync; explicit boundary agreements to avoid feature overlap with neighboring products.
+### Peers on adjacent surfaces
+- Other PMs working adjacent surfaces (deal workflow tools, partner-facing portals, contract automation). *Engage:* weekly team sync; explicit boundary agreements to avoid feature overlap with neighboring products.
 
 ### Flagged for later
 - **Partners themselves** are data subjects, not stakeholders in v1 (briefs are internal-only). If AI-derived insights ever surface in partner-facing materials, this becomes a partner-trust conversation. Flagging now to avoid retrofit.
@@ -155,7 +155,7 @@ On click, generate a 1-page brief:
 - Every claim sourced — click any line, see the underlying data
 - Every section regenerable independently
 - Every section has thumbs-up/down for eval data collection
-- Brief reads like a senior PM wrote it, not a template
+- Brief reads like a an experienced PM wrote it, not a template
 
 ---
 
@@ -227,7 +227,7 @@ Portfolio-level pattern detection (which partner segments are growing / at risk)
 
 ## What "good" looks like in 6 months
 
-A new partner manager runs their first QBR with 80% less prep time than their predecessor. The brief they bring is indistinguishable from a senior PM's brief. They spend their freed time on the conversations themselves — and on the partners no one had time for before.
+A new partner manager runs their first QBR with 80% less prep time than their predecessor. The brief they bring is indistinguishable from a an experienced PM's brief. They spend their freed time on the conversations themselves — and on the partners no one had time for before.
 
 ---
 
