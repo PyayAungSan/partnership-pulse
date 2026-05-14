@@ -181,34 +181,38 @@
 .pp-htip-tier-at-risk { background: var(--bad-soft); color: var(--bad); }
 
 .pp-htip-explain {
-  color: var(--text-3); line-height: 1.45;
-  margin-bottom: 10px;
+  color: var(--text-3); line-height: 1.4;
+  font-size: 12px;
+  margin-bottom: 8px;
 }
 .pp-htip-drivers-h {
   font-size: 10px;
   color: var(--text-3);
   text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .pp-htip-drivers {
-  list-style: none; padding: 0; margin: 0 0 10px;
-  display: flex; flex-direction: column; gap: 6px;
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 5px;
 }
 .pp-htip-drivers li {
   display: grid;
-  grid-template-columns: 32px 1fr;
+  grid-template-columns: 28px 1fr;
   gap: 8px; align-items: start;
   font-size: 12px; line-height: 1.4;
   color: var(--text-2);
 }
+.pp-htip-text { min-width: 0; word-break: normal; overflow-wrap: anywhere; }
 .pp-htip-impact {
   font-family: var(--font-mono); font-size: 10.5px; font-weight: 600;
-  padding: 2px 5px; border-radius: 3px;
+  padding: 2px 4px; border-radius: 3px;
   text-align: center;
+  white-space: nowrap;
 }
-.pp-htip-up   { background: var(--good-soft); color: var(--good); }
-.pp-htip-down { background: var(--bad-soft);  color: var(--bad); }
-.pp-htip-flat { background: var(--bg-2);      color: var(--text-3); }
+.pp-htip-up    { background: var(--good-soft); color: var(--good); }
+.pp-htip-down  { background: var(--bad-soft);  color: var(--bad); }
+.pp-htip-flat  { background: var(--bg-2);      color: var(--text-3); }
+.pp-htip-empty { background: transparent;      color: var(--text-5); }
 
 .pp-htip-foot {
   font-size: 11px; color: var(--text-4);

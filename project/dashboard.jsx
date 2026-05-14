@@ -20,7 +20,28 @@ function HealthCell({ partner, compact }) {
   function onEnter() {
     if (!ref.current) return;
     const r = ref.current.getBoundingClientRect();
-    setPos({ top: r.bottom + 6, left: r.left });
+    const z = parseFloat(getComputedStyle(document.body).zoom) || 1;
+    const vw = window.innerWidth / z;
+    const vh = window.innerHeight / z;
+    const TIP_W = 320;
+    const TIP_H_EST = 220;
+    const GAP = 8;
+
+    const rTop = r.top / z;
+    const rBottom = r.bottom / z;
+    const rLeft = r.left / z;
+
+    const spaceBelow = vh - rBottom;
+    const flipUp = spaceBelow < TIP_H_EST + GAP;
+
+    let top = flipUp ? rTop - GAP - TIP_H_EST : rBottom + GAP;
+    if (top < 12) top = 12;
+
+    let left = rLeft;
+    if (left + TIP_W > vw - 12) left = vw - TIP_W - 12;
+    if (left < 12) left = 12;
+
+    setPos({ top, left, flipUp });
     setHov(true);
   }
   function onLeave() { setHov(false); }
@@ -59,25 +80,19 @@ function HealthCell({ partner, compact }) {
             <span className={`pp-htip-tier pp-htip-tier-${tier.toLowerCase().replace(' ', '-')}`}>{tier}</span>
           </div>
           <div className="pp-htip-explain">
-            Pulse blends signals from CRM, Play Console, support, and activity logs into a 0–100 score.
-            70 is the healthy threshold.
+            0–100 score from CRM, performance, support, and activity signals. 70 = healthy.
           </div>
           <div className="pp-htip-drivers-h">Drivers this quarter</div>
           <ul className="pp-htip-drivers">
-            {driverList.slice(0, 5).map((d, i) => (
+            {driverList.slice(0, 3).map((d, i) => (
               <li key={i}>
-                {d.impact !== null && (
-                  <span className={`pp-htip-impact ${d.impact > 0 ? "pp-htip-up" : d.impact < 0 ? "pp-htip-down" : "pp-htip-flat"}`}>
-                    {d.impact > 0 ? "+" : ""}{d.impact}
-                  </span>
-                )}
-                <span>{d.text}</span>
+                <span className={`pp-htip-impact ${d.impact === null ? "pp-htip-empty" : d.impact > 0 ? "pp-htip-up" : d.impact < 0 ? "pp-htip-down" : "pp-htip-flat"}`}>
+                  {d.impact === null ? "·" : (d.impact > 0 ? "+" : "") + d.impact}
+                </span>
+                <span className="pp-htip-text">{d.text}</span>
               </li>
             ))}
           </ul>
-          <div className="pp-htip-foot">
-            <Icons.Sparkle size={10} /> Click the partner to see the full health breakdown
-          </div>
         </div>,
         document.body
       )}
